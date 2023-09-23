@@ -3,6 +3,7 @@ import "bootstrap"
 import {IUser} from "./models/IUser";
 import UserService from "./services/UserService";
 import {Button} from "react-bootstrap";
+import {Link} from "react-router-dom";
 
 function App() {
     const [users, setUsers] = useState<IUser[]>([])
@@ -24,6 +25,7 @@ function App() {
             <div className="text-bg-info p-3 text-center">
                 <h1>Bank</h1>
             </div>
+            <Link to="/register"><Button className="m-3">Go sign in</Button> </Link>
             <div className="d-flex justify-content-center align-items-center p-4">
                 <Button className="m-1" onClick={getUsers}>Get users</Button>
                 <Button className="m-1" onClick={LogUsers}>Log users</Button>
