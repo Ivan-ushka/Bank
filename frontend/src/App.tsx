@@ -1,26 +1,40 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from 'react';
+import "bootstrap"
+import {IUser} from "./models/IUser";
+import UserService from "./services/UserService";
+import {Button} from "react-bootstrap";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [users, setUsers] = useState<IUser[]>([])
+
+    async function getUsers(){
+        try{
+           const response = await UserService.fetchUsers();
+           setUsers(response.data)
+        }catch(e){
+            console.log(e)
+        }
+    }
+
+    function LogUsers(){
+        console.log(users)
+    }
+    return (
+        <div>
+            <div className="text-bg-info p-3 text-center">
+                <h1>Bank</h1>
+            </div>
+            <div className="d-flex justify-content-center align-items-center p-4">
+                <Button className="m-1" onClick={getUsers}>Get users</Button>
+                <Button className="m-1" onClick={LogUsers}>Log users</Button>
+            </div>
+            <div>
+                {
+                    users.map(user => <div key={user.id}>{user.name}</div>)
+                }
+            </div>
+        </div>
+    );
 }
 
 export default App;
