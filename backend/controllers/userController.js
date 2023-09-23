@@ -4,6 +4,7 @@ class UserController {
         try {
             const {name, age, sex, money, experience} = req.body
             const userData = await userService.registration(name, age, sex, money, experience)
+            console.log(userData)
             return res.json(userData)
 
         } catch (e) {
