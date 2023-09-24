@@ -4,6 +4,7 @@ import './index.css';
 import Router from "./router/Router";
 import {BrowserRouter} from "react-router-dom";
 import Store from "./store/store";
+import 'bootstrap/dist/css/bootstrap.css';
 
 const store = new Store();
 

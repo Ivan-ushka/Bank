@@ -15,27 +15,26 @@ function RegistrationFrom() {
 
     return (
         <div>
-            <div className="text-bg-info p-3 text-center">
-                <h1>Bank</h1>
-            </div>
             <div className="d-flex justify-content-center align-items-center flex-column">
-                <div
-                    className="d-flex p-5 justify-content-center align-items-center border border-3 border-info flex-column m-1 w-25">
-                    <div className="d-flex flex-row m-2">
-                        <label>Input name</label>
+                <div className="d-flex p-5  border border-3 border-info rounded flex-column m-1 w-30">
+                    <div className="d-flex flex-row justify-content-end m-2">
+                        <label className='me-2'>Input name</label>
                         <input type="text" onChange={e => setName(e.target.value)}></input>
                     </div>
-                    <div className="d-flex flex-row  m-2">
-                        <label>Input age</label>
+                    <div className="d-flex flex-row justify-content-end m-2">
+                        <div className="d-flex flex-row align-items-start">
+                            <label className='me-2'>Input age</label>
+                        </div>
                         <input type="number" onChange={e => setAge(Number(e.target.value))}></input>
                     </div>
-                    <div className="d-flex flex-row  m-2">
-                        <label>Input money</label>
+                    <div className="d-flex flex-row m-2 justify-content-end">
+                        <label className='me-2'>Input money</label>
                         <input type="number" onChange={e => setMoney(Number(e.target.value))}></input>
                     </div>
                     <div className="d-flex flex-row flex-column m-2">
                         <div>
-                            <input className="form-check-input m-1" type="radio" name="flexRadioDefault" onClick={() => setSex('Femail')}
+                            <input className="form-check-input m-1" type="radio" name="flexRadioDefault"
+                                   onClick={() => setSex('Femail')}
                                    id="flexRadioDefault1"/>
                             <label className="form-check-label" htmlFor="flexRadioDefault1">
                                 Femail
@@ -49,10 +48,10 @@ function RegistrationFrom() {
                             </label>
                         </div>
                     </div>
-                    <Button className="m-2" onClick={() => store.registration(name, age, sex, money, experience)}>Add user</Button>
+                    <Button className="m-2" onClick={() => store.registration(name, age, sex, money, experience)}>Add
+                        user</Button>
                 </div>
-                <CustomTable />
-                <Link to="/" ><Button>Go home</Button></Link>
+                <Link to="/"><Button>Go home</Button></Link>
             </div>
         </div>
     );
