@@ -13,9 +13,9 @@ export default class Store {
         this.user = user;
     }
 
-    async registration(name: string, age: number, sex: string, money: number, experience: string) {
+    async registration(name: string, age: number, sex: string, money: number) {
         try {
-            const response = await AuthService.registration(name, age, sex, money, experience)
+            const response = await AuthService.registration(name, age, sex, money)
             this.setUser(response.data.user)
         } catch (e) {
             console.log(e)

@@ -1,4 +1,4 @@
-import React, {FC, useEffect, useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {IUser} from "../models/IUser";
 import UserService from "../services/UserService";
 function CustomTable(){
@@ -14,7 +14,8 @@ function CustomTable(){
     }
 
     useEffect(() =>{
-       let a =  getUsers()
+       let users =  getUsers()
+        console.log('users:', users)
     }, [])
 
     return (

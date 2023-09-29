@@ -1,7 +1,6 @@
 import React, {useContext, useState} from 'react';
 import {Button} from "react-bootstrap";
 import {Context} from "../index";
-import CustomTable from "./CustomTable";
 import {Link} from "react-router-dom";
 
 function RegistrationFrom() {
@@ -9,7 +8,6 @@ function RegistrationFrom() {
     const [age, setAge] = useState<number>(0)
     const [sex, setSex] = useState<string>('')
     const [money, setMoney] = useState<number>(0)
-    const [experience, setExperience] = useState<string>('')
 
     const {store} = useContext(Context)
 
@@ -48,7 +46,7 @@ function RegistrationFrom() {
                             </label>
                         </div>
                     </div>
-                    <Button className="m-2" onClick={() => store.registration(name, age, sex, money, experience)}>Add
+                    <Button className="m-2" onClick={() => store.registration(name, age, sex, money)}>Add
                         user</Button>
                 </div>
                 <Link to="/"><Button>Go home</Button></Link>
