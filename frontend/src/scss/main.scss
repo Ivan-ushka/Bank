@@ -1,14 +1,8 @@
 $theme-colors: (
-        "custom-color": #7FDBFF,
-        "orange": #fd7e14,
-        "custom-blue": #0c2b6c,
-        "custom-lite-blue": #69c8dc,
+        "main": #4E46E8,
+        "dark-blue": #1D1C31,
+        "light-purple": #B6B3EB
 );
-
-.custom-element {
-  color: #7FDBFF;
-  background-color: #fd7e14;
-}
 
 
 @import "../../node_modules/bootstrap/scss/bootstrap";

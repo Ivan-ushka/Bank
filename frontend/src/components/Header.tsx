@@ -1,23 +1,23 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logo from "../assets/images/logo.png"
+import {Button} from "react-bootstrap";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faCrown} from "@fortawesome/free-solid-svg-icons";
+
 function Header() {
-    const bg = {
-        background: 'linear-gradient(150deg, rgba(211,240,8,1) 1%, rgba(231,228,27,1) 5%, rgba(57,214,157,1) 32%, rgba(105,200,220,1) 52%, rgba(110,109,209,1) 71%, rgba(147,87,199,1) 91%, rgba(169,68,194,1) 97%)',
-    };
-
-
     return (
-        <div className="d-flex align-items-center bg-opacity-25 bg-secondary" >
-            <div className=" p-3 text-center float-left">
-                <img src={logo} alt="logo" width="100px"/>
+        <div className="d-flex bg-main align-items-center justify-content-center" style={{ padding: "30px 256px"}}>
+            <div className="text-light d-flex">
+                <FontAwesomeIcon icon={faCrown} style={{color: "#fff700", fontSize: 35}} />
+                <div> CrownBank </div>
             </div>
-            <div className=" p-3 text-custom-blue">
-                <Link to='/orderCard' className="text-decoration-none text-custom-blue"><h3>About</h3></Link>
+            <div className="navigation d-flex justify-content-end w-100  align-items-center" style={{fontSize: 16, fontWeight: 400}}>
+                <Link to='/' className="text-decoration-none text-light p-2"><div>Home</div></Link>
+                <Link to='/orderCard' className="text-decoration-none text-light p-2"><div>Contact</div></Link>
+                <Link to='/orderCard' className="text-decoration-none text-light p-2"><div>About us</div></Link>
+                <Link to='/orderCard' className="text-decoration-none text-light p-2"><div>Services</div></Link>
             </div>
-            <div className=" p-3 text-custom-blue">
-                <Link to='/orderCard' className="text-decoration-none text-custom-blue"><h3>Order card</h3></Link>
-            </div>
+            <Button className="shadow" style={{width: 100}}>Sign up</Button>
         </div>
     );
 }
