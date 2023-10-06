@@ -1,16 +1,20 @@
 import React from 'react';
 import {Route, Routes} from "react-router-dom";
-import RegistrationFrom from "../components/RegistrationFrom";
-import Home from "../pages/Home";
-import OrderCard from "../pages/OrderCard";
+import Home from "../pages/Home/Home";
+import OrderCard from "../pages/orderCard/OrderCard";
+import RegistrationPage from "../pages/RegistrationPage";
+import About from "../pages/About";
 
 function Router() {
     return (
-        <Routes>
-            <Route path="/" element={<Home />}/>
-            <Route path="/register" element={<RegistrationFrom />}/>
-            <Route path="/orderCard" element={<OrderCard />}/>
-        </Routes>
+        <div style={{fontFamily: 'Plus Jakarta Sans', fontSize: 24, fontWeight: 600}}>
+            <Routes>
+                <Route path="/" element={<Home />}/>
+                <Route path="/register" element={<RegistrationPage />}/>
+                <Route path="/orderCard" element={<OrderCard />}/>
+                <Route path="/about" element={<About />}/>
+            </Routes>
+        </div>
     );
 }
 

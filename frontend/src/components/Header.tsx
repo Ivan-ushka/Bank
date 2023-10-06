@@ -14,10 +14,10 @@ function Header() {
             <div className="navigation d-flex justify-content-end w-100  align-items-center" style={{fontSize: 16, fontWeight: 400}}>
                 <Link to='/' className="text-decoration-none text-light p-2"><div>Home</div></Link>
                 <Link to='/orderCard' className="text-decoration-none text-light p-2"><div>Contact</div></Link>
-                <Link to='/orderCard' className="text-decoration-none text-light p-2"><div>About us</div></Link>
-                <Link to='/orderCard' className="text-decoration-none text-light p-2"><div>Services</div></Link>
+                <Link to='/about' className="text-decoration-none text-light p-2"><div>About us</div></Link>
+                <Link to='/orderCard' className="text-decoration-none text-light p-2"><div>Order card</div></Link>
             </div>
-            <Button className="shadow" style={{width: 100}}>Sign up</Button>
+            <Link to='/register'><Button className="shadow" style={{width: 100}}>Sign up</Button></Link>
         </div>
     );
 }

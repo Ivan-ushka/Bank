@@ -1,8 +1,8 @@
 import React from 'react';
-import bank from "../assets/images/bank.svg"
-import safety from "../assets/images/safety.svg"
-import staticUp from "../assets/images/statistic-up.svg"
-import Card from "./ui/card";
+import bank from "../../../assets/images/bank.svg"
+import safety from "../../../assets/images/safety.svg"
+import staticUp from "../../../assets/images/statistic-up.svg"
+import Card from "../../../components/ui/card";
 
 function Benefits() {
     const data = [

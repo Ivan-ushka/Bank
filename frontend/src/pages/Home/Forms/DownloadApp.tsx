@@ -1,7 +1,7 @@
 import React from 'react';
-import downloadApp from "../assets/images/downloadApp.jpg"
-import GooglePlay from "../assets/images/GooglePlayBtn.jpg"
-import appStore from "../assets/images/AppStoreBtn.svg"
+import downloadApp from "../../../assets/images/downloadApp.jpg"
+import GooglePlay from "../../../assets/images/GooglePlayBtn.jpg"
+import appStore from "../../../assets/images/AppStoreBtn.svg"
 import {Link} from "react-router-dom";
 function DownloadApp() {
     return (

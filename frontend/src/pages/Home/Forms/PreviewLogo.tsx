@@ -1,6 +1,6 @@
 import React from 'react';
-import img2 from "../assets/images/city.jpg"
-import card from "../assets/images/card3.png"
+import img2 from "../../../assets/images/city.jpg"
+import card from "../../../assets/images/card3.png"
 import {Button} from "react-bootstrap";
 function PreviewLogo() {
     return (
@@ -15,7 +15,7 @@ function PreviewLogo() {
                 </div>
                 <div className="d-flex justify-content-end w-100  align-items-center pe-5">
                     <img src={img2} alt="s" width={300} className='border rounded position-absolute z-1 shadow'/>
-                    <img src={card} alt="s1" width={450} className="opacity-75 position-relative z-2 "/>
+                    <img src={card} alt="s1" width={450} className="position-relative z-2"/>
                 </div>
         </div>
     );

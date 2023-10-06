@@ -1,22 +1,16 @@
 import React from 'react';
-import {Link} from "react-router-dom";
-import {Button} from "react-bootstrap";
-import CustomTable from "../components/CustomTable";
-import Header from "../components/Header";
-// @ts-ignore
-import card1 from "../assets/images/card1.jpg"
-// @ts-ignore
-import card2 from "../assets/images/card2.jpg"
-import PreviewLogo from "../components/PreviewLogo";
+import Header from "../../components/Header";
+import PreviewLogo from "./Forms/PreviewLogo";
 import {faMoneyCheckDollar} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import Benefits from "../components/Benefits";
-import DownloadApp from "../components/DownloadApp";
+import Benefits from "./Forms/Benefits";
+import DownloadApp from "./Forms/DownloadApp";
+import Footer from "../../components/Footer";
 
 function Home() {
     const length= 6;
     return (
-        <div  style={{fontFamily: 'Plus Jakarta Sans', fontSize: 24, fontWeight: 600}}>
+        <div>
             <Header />
             <PreviewLogo />
             <div className="line bg-main opacity-75 m-auto d-flex align-items-center justify-content-between shadow" style={{ padding: "0 156px"}}>
@@ -24,6 +18,7 @@ function Home() {
             </div>
             <Benefits />
             <DownloadApp />
+            <Footer />
         </div>
     );
 }
