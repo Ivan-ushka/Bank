@@ -1,8 +1,9 @@
 import React from 'react';
-import bank from "../../../assets/images/bank.svg"
-import safety from "../../../assets/images/safety.svg"
-import staticUp from "../../../assets/images/statistic-up.svg"
-import Card from "../../../components/ui/card";
+import bank from "../../../../assets/images/bank.svg"
+import safety from "../../../../assets/images/safety.svg"
+import staticUp from "../../../../assets/images/statistic-up.svg"
+import {Card, CardBody, CardTitle, Col, Container, Row} from "react-bootstrap";
+import CardBenefit from "./CardBenefit";
 
 function Benefits() {
     const data = [
@@ -11,16 +12,16 @@ function Benefits() {
         ['Economic Stability    ', 'Deposits in most banks are insured by government agencies, such as the Federal Deposit Insurance Corporation (FDIC)', staticUp],
     ]
     return (
-        <div style={{ padding: "30px 256px"}}>
-            <div className='my-5 mx-4'>
-                <h3 style={{fontSize: 40, fontWeight: 800}}>Our Key Benefits</h3>
-            </div>
-            <div className='d-flex justify-content-center align-items-center'>
+        <Container className="text-center">
+            <h1 className="p-5">
+               Our Key Benefits
+            </h1>
+            <Row>
                 {
-                    data.map((item, i) => <Card title={item[0]} text={item[1]} link={item[2]} key={i}/>)
+                    data.map((item, i) => <Col sm={4}><CardBenefit title={item[0]} text={item[1]} link={item[2]} key={i}/></Col>)
                 }
-            </div>
-        </div>
+            </Row>
+        </Container>
     );
 }
 

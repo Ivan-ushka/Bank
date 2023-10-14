@@ -7,7 +7,7 @@ import About from "../pages/About";
 
 function Router() {
     return (
-        <div style={{fontFamily: 'Plus Jakarta Sans', fontSize: 24, fontWeight: 600}}>
+        <div style={{fontFamily: 'Plus Jakarta Sans', fontSize: 16, fontWeight: 600}}>
             <Routes>
                 <Route path="/" element={<Home />}/>
                 <Route path="/register" element={<RegistrationPage />}/>
