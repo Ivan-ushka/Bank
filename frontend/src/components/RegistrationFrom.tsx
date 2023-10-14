@@ -37,6 +37,7 @@ function RegistrationFrom() {
 
     return (
         <div>
+            {store.isAuth }
             <div className="d-flex justify-content-center align-items-center flex-column" style={{height: 600}}>
                 <div className="d-flex p-5  border border-2 border-light-purple shadow rounded flex-column m-1 bg-white " style={{width: 600}}>
                     <InputGroup className="input-group input-group-lg mb-3">
@@ -90,4 +91,4 @@ function RegistrationFrom() {
     );
 }
 
-export default RegistrationFrom;
+export default observer(RegistrationFrom);

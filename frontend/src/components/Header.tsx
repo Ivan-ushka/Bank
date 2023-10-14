@@ -5,6 +5,8 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faCrown} from "@fortawesome/free-solid-svg-icons";
 import {observer} from "mobx-react-lite";
 import {Context} from "../index";
+import CustomTable from "./CustomTable";
+import CustomDropdown from "./ui/CustomDropdown";
 
 function Header() {
     const {store} = useContext(Context);
@@ -32,10 +34,7 @@ function Header() {
                     </Link>
                 </Nav>
                     {(store.isAuth) ? (
-                        <div>
-                         <div>Profile</div>
-                         <Button onClick={() => store.logout()}>Log out</Button>
-                        </div>
+                        <CustomDropdown />
                  ):(
                      <div>
                          <Link to='/login'><Button className="shadow me-3" style={{width: 100}}>Log in</Button></Link>
