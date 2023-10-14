@@ -4,11 +4,6 @@ import Footer from "../../components/Footer";
 import card5 from "../../assets/images/Card5.svg"
 import card6 from "../../assets/images/Card6.svg"
 import card7 from "../../assets/images/Card7.svg"
-import {Button} from "react-bootstrap";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faArrowRight} from "@fortawesome/free-solid-svg-icons";
-import {faArrowLeft} from "@fortawesome/free-solid-svg-icons";
-import bank from "../../assets/images/a-waterfall-with-a-blue-sky-and-clouds.jpg"
 import CardWrap from "./CardWrap";
 function OrderCard() {
     return (

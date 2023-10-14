@@ -1,10 +1,13 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import {Link} from 'react-router-dom';
 import {Button, Container, Nav, Navbar, NavbarBrand} from "react-bootstrap";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faCrown} from "@fortawesome/free-solid-svg-icons";
+import {observer} from "mobx-react-lite";
+import {Context} from "../index";
 
 function Header() {
+    const {store} = useContext(Context);
     return (
         <Navbar expand="lg" className="d-flex bg-main align-items-center justify-content-center px-5 py-4">
             <Container>
@@ -28,11 +31,21 @@ function Header() {
                         <h5 className="m-0">Order card</h5>
                     </Link>
                 </Nav>
-                <Link to='/register'><Button className="shadow" style={{width: 100}}>Sign up</Button></Link>
+                    {(store.isAuth) ? (
+                        <div>
+                         <div>Profile</div>
+                         <Button onClick={() => store.logout()}>Log out</Button>
+                        </div>
+                 ):(
+                     <div>
+                         <Link to='/login'><Button className="shadow me-3" style={{width: 100}}>Log in</Button></Link>
+                         <Link to='/register'><Button className="shadow" style={{width: 100}}>Sign up</Button></Link>
+                     </div>
+                    )}
                 </Navbar.Collapse>
             </Container>
         </Navbar>
     );
 }
 
-export default Header;
+export default observer(Header);

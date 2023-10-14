@@ -82,7 +82,7 @@ function RegistrationFrom() {
                         {confirmPwdFocus && !validConfirmPwd? <p>Must match the first password input field.</p>:<></>}
                     </div>
                     <div className="d-flex justify-content-center align-items-center">
-                        <Button className="w-25 btn-lg" onClick={() => {}}>Sign in</Button>
+                        <Button type="submit" className="w-25 btn-lg" onClick={() => store.registration(name, pwd)}>Sign in</Button>
                     </div>
                 </div>
             </div>

@@ -1,11 +1,19 @@
-import React from 'react';
+import React, {useContext, useEffect} from 'react';
 import {Route, Routes} from "react-router-dom";
 import Home from "../pages/Home/Home";
 import OrderCard from "../pages/orderCard/OrderCard";
 import RegistrationPage from "../pages/RegistrationPage";
 import About from "../pages/About";
+import {Context} from "../index";
 
 function Router() {
+    const {store} = useContext(Context);
+
+    useEffect( ()=>{
+        if(localStorage.getItem('token')){
+            store.checkAuth();
+        }
+    },[store])
     return (
         <div style={{fontFamily: 'Plus Jakarta Sans', fontSize: 16, fontWeight: 600}}>
             <Routes>
