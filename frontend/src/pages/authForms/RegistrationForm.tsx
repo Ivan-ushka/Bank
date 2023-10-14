@@ -1,12 +1,13 @@
-import React, {useContext, useEffect, useRef, useState} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import {Button, Form, InputGroup} from "react-bootstrap";
-import {Context} from "../index";
-import {Link} from "react-router-dom";
+import {Context} from "../../index";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faUser} from "@fortawesome/free-regular-svg-icons";
 import {faLock} from "@fortawesome/free-solid-svg-icons";
+import {observer} from "mobx-react-lite";
 
-function RegistrationFrom() {
+
+function RegistrationForm() {
     const [name, setName] = useState<string>('')
     const [validName, setValidName] = useState<boolean>(false)
     const [nameFocus, setNameFocus] = useState<boolean>(false);
@@ -35,9 +36,9 @@ function RegistrationFrom() {
         name.length > 3 ? setValidName(true) : setValidName(false)
     }, [name])
 
+    // @ts-ignore
     return (
         <div>
-            {store.isAuth }
             <div className="d-flex justify-content-center align-items-center flex-column" style={{height: 600}}>
                 <div className="d-flex p-5  border border-2 border-light-purple shadow rounded flex-column m-1 bg-white " style={{width: 600}}>
                     <InputGroup className="input-group input-group-lg mb-3">
@@ -91,4 +92,4 @@ function RegistrationFrom() {
     );
 }
 
-export default observer(RegistrationFrom);
+export default observer(RegistrationForm);

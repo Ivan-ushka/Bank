@@ -14,7 +14,6 @@ function Home() {
     const {store} = useContext(Context);
     return (
         <div>
-            {(store.isAuth) && <div>Я крут</div>}
             <Header />
             <PreviewLogo />
             <div className="line bg-main opacity-75 m-auto d-flex align-items-center justify-content-between shadow" style={{ padding: "0 156px"}}>

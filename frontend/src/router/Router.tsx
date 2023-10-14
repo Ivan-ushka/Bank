@@ -2,9 +2,10 @@ import React, {useContext, useEffect} from 'react';
 import {Route, Routes} from "react-router-dom";
 import Home from "../pages/Home/Home";
 import OrderCard from "../pages/orderCard/OrderCard";
-import RegistrationPage from "../pages/RegistrationPage";
+import RegistrationPage from "../pages/authForms/RegistrationPage";
 import About from "../pages/About";
 import {Context} from "../index";
+import LoginPage from "../pages/authForms/LoginPage";
 
 function Router() {
     const {store} = useContext(Context);
@@ -19,6 +20,7 @@ function Router() {
             <Routes>
                 <Route path="/" element={<Home />}/>
                 <Route path="/register" element={<RegistrationPage />}/>
+                <Route path="/login" element={<LoginPage />}/>
                 <Route path="/orderCard" element={<OrderCard />}/>
                 <Route path="/about" element={<About />}/>
             </Routes>
