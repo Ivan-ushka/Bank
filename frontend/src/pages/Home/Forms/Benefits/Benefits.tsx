@@ -12,11 +12,11 @@ function Benefits() {
         ['Economic Stability    ', 'Deposits in most banks are insured by government agencies, such as the Federal Deposit Insurance Corporation (FDIC)', staticUp],
     ]
     return (
-        <Container className="text-center">
+        <Container className="d-flex flex-column align-items-center justify-content-center">
             <h1 className="p-5">
                Our Key Benefits
             </h1>
-            <Row>
+            <Row className="d-lg-flex flex-lg-wrap flex-lg-row d-flex flex-column justify-content-center">
                 {
                     data.map((item, i) => <Col sm={4}><CardBenefit title={item[0]} text={item[1]} link={item[2]} key={i}/></Col>)
                 }

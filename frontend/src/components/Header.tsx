@@ -1,11 +1,10 @@
 import React, {useContext} from 'react';
 import {Link} from 'react-router-dom';
-import {Button, Container, Nav, Navbar, NavbarBrand} from "react-bootstrap";
+import {Button, Container, Nav, Navbar} from "react-bootstrap";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faCrown} from "@fortawesome/free-solid-svg-icons";
 import {observer} from "mobx-react-lite";
 import {Context} from "../index";
-import CustomTable from "./CustomTable";
 import CustomDropdown from "./ui/CustomDropdown";
 
 function Header() {

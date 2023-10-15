@@ -1,5 +1,4 @@
 import React from 'react';
-import card7 from "../../assets/images/Card7.svg";
 import {Button, Card, CardBody, CardImg, CardTitle, Col, Container, Row} from "react-bootstrap";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faArrowLeft, faArrowRight} from "@fortawesome/free-solid-svg-icons";

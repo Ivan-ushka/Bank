@@ -8,8 +8,6 @@ import {API_URL} from "../http";
 export default class Store {
     user = {} as IUser
     isAuth = false;
-    isChangePwd = false
-    isSuccessChangePwd = false;
 
     constructor() {
         makeAutoObservable(this)
@@ -66,14 +64,6 @@ export default class Store {
             localStorage.setItem('token', response.data.accessToken);
             this.setAuth(true);
             this.setUser(response.data.user);
-        } catch (e: any) {
-            console.log(e.response?.data?.message);
-        }
-    }
-
-    async checkPwd(name: string, pwd: string) {
-        try {
-            let response = await AuthService.checkPassword(name, pwd)
         } catch (e: any) {
             console.log(e.response?.data?.message);
         }

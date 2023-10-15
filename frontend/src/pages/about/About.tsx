@@ -1,8 +1,6 @@
 import React from 'react';
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
-import city from "../../assets/images/1.jpg"
-import glass from "../../assets/images/2_.jpg"
 import { Carousel } from 'react-bootstrap';
 
 function About() {

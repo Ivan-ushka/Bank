@@ -14,7 +14,7 @@ function CustomDropdown() {
 
             <Dropdown.Menu>
                 <Dropdown.Item href="#/action-1">Information</Dropdown.Item>
-                <Dropdown.Item href="#/action-2">Discounts</Dropdown.Item>
+                <Dropdown.Item href="#/action-2">Bank account</Dropdown.Item>
                 <Dropdown.Item href="#/action-3">Cards</Dropdown.Item>
                 <Dropdown.Divider />
                 <Dropdown.Item onClick={() => store.logout()}>Log out</Dropdown.Item>

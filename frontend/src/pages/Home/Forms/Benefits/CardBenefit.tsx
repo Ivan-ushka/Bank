@@ -10,7 +10,7 @@ interface CardProps {
 }
 function CardBenefit({title, text, link}: CardProps) {
     return (
-        <Card className='card d-flex justify-content-center align-items-center text-center p-3 shadow' style={{width: 350, height: 400}}>
+        <Card className='card d-flex justify-content-center align-items-center text-center my-4 my-sm-0 p-3 shadow' style={{width: 350, height: 400}}>
             <CardImg className='m-3' src={link} alt="bank" width={80} height={80}/>
             <CardTitle className='m-3' style={{fontWeight: 600}}>{title}</CardTitle>
             <CardText className='m-3'style={{fontWeight: 300, fontSize: 16}}>{text}</CardText>

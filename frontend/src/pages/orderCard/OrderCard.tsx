@@ -5,7 +5,6 @@ import card5 from "../../assets/images/Card5.svg"
 import card6 from "../../assets/images/Card6.svg"
 import card7 from "../../assets/images/Card7.svg"
 import CardWrap from "./CardWrap";
-import {Container} from "react-bootstrap";
 function OrderCard() {
     return (
         <div>
