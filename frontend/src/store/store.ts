@@ -19,14 +19,6 @@ export default class Store {
         this.user = user;
     }
 
-    setSuccessChangePwd(bool: boolean) {
-        this.isSuccessChangePwd = bool;
-    }
-
-    setChangePwd(bool: boolean) {
-        this.isChangePwd = bool;
-    }
-
     setAuth(bool: boolean) {
         this.isAuth = bool;
     }

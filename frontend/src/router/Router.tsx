@@ -3,9 +3,10 @@ import {Route, Routes} from "react-router-dom";
 import Home from "../pages/Home/Home";
 import OrderCard from "../pages/orderCard/OrderCard";
 import RegistrationPage from "../pages/authForms/RegistrationPage";
-import About from "../pages/About";
+import About from "../pages/about/About";
 import {Context} from "../index";
 import LoginPage from "../pages/authForms/LoginPage";
+import Contact from "../pages/contact/Contact";
 
 function Router() {
     const {store} = useContext(Context);
@@ -23,6 +24,7 @@ function Router() {
                 <Route path="/login" element={<LoginPage />}/>
                 <Route path="/orderCard" element={<OrderCard />}/>
                 <Route path="/about" element={<About />}/>
+                <Route path="/contact" element={<Contact />}/>
             </Routes>
         </div>
     );

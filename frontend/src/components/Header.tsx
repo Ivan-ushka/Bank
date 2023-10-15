@@ -24,13 +24,13 @@ function Header() {
                         <h5 className="m-0">Home</h5>
                     </Link>
                     <Link to='/orderCard' className="text-decoration-none text-light p-2">
+                        <h5 className="m-0">Order card</h5>
+                    </Link>
+                    <Link to='/contact' className="text-decoration-none text-light p-2">
                         <h5 className="m-0">Contact</h5>
                     </Link>
                     <Link to='/about' className="text-decoration-none text-light p-2">
                         <h5 className="m-0">About us</h5>
-                    </Link>
-                    <Link to='/orderCard' className="text-decoration-none text-light p-2">
-                        <h5 className="m-0">Order card</h5>
                     </Link>
                 </Nav>
                     {(store.isAuth) ? (

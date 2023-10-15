@@ -5,6 +5,7 @@ import card5 from "../../assets/images/Card5.svg"
 import card6 from "../../assets/images/Card6.svg"
 import card7 from "../../assets/images/Card7.svg"
 import CardWrap from "./CardWrap";
+import {Container} from "react-bootstrap";
 function OrderCard() {
     return (
         <div>
@@ -14,11 +15,7 @@ function OrderCard() {
                     <div className="d-flex align-items-center justify-content-center flex-column w-75 bg-main">
                         <div className="d-flex justify-content-center align-items-center">
                             <CardWrap title={"Silver card"} src={`${card5}`} />
-                            <div>
-                                description
-                            </div>
                         </div>
-
                         <CardWrap title={"Medium card"} src={`${card7}`} />
                         <CardWrap title={"Golden card"} src={`${card6}`} />
                     </div>
